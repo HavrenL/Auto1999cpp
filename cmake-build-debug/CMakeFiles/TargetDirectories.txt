@@ -1,0 +1,5 @@
+C:/Users/86133/Desktop/Auto1999cpp/cmake-build-debug/CMakeFiles/Auto1999cpp.dir
+C:/Users/86133/Desktop/Auto1999cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/86133/Desktop/Auto1999cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/86133/Desktop/Auto1999cpp/cmake-build-debug/CMakeFiles/Auto1999cpp_autogen_timestamp_deps.dir
+C:/Users/86133/Desktop/Auto1999cpp/cmake-build-debug/CMakeFiles/Auto1999cpp_autogen.dir
