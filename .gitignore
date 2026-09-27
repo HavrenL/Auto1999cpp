@@ -1,0 +1,107 @@
+# ============================================================
+# Auto1999cpp .gitignore
+#
+# 背景：本仓库此前把整个 cmake-build-debug/（80 MB，含 Qt DLL、
+# 生成的 .exe、.obj 中间文件）提交进了版本控制，导致
+#   1) git clone 要下 29 MB，而 99.7% 的内容可由 cmake 重新生成；
+#   2) GitHub 把主语言识别成 Makefile（CMake 生成的 Makefile 压过了
+#      19 个 .cpp），而不是 C++。
+# 本文件用于阻止这些内容再次进入版本控制。
+# ============================================================
+
+# ---------- 构建目录 ----------
+cmake-build-*/
+build/
+Build/
+build-*/
+out/
+[vV]s[0-9]*/
+x64/
+x86/
+
+# ---------- CMake 生成物 ----------
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+.cache/
+.deps/
+CMakeUserPresets.json
+
+# ---------- 编译中间文件 ----------
+*.o
+*.obj
+*.lo
+*.slo
+*.d
+*.pdb
+*.ilk
+*.idb
+*.gch
+*.pch
+*.dwo
+*.exp
+
+# ---------- 链接产物与可执行文件 ----------
+*.exe
+*.dll
+*.so
+*.so.*
+*.dylib
+*.a
+*.lib
+*.la
+*.lai
+*.out
+*.app
+*.msi
+
+# ---------- CMake 生成的 Makefile ----------
+# 注意：本仓库没有手写 Makefile，全部 Makefile 都是 CMake 生成的。
+# 若将来引入手写 Makefile，请删掉这一节（或改用 !Makefile 白名单）。
+Makefile
+makefile
+GNUmakefile
+
+# ---------- Qt ----------
+moc_*.cpp
+moc_*.h
+moc_predefs.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+.qmake.stash
+*.pro.user
+*.pro.user.*
+
+# ---------- IDE ----------
+.idea/
+.vs/
+.vscode/
+*.iml
+*.suo
+*.user
+*.user.*
+*.sln.docstates
+CMakeLists.txt.user*
+
+# ---------- 操作系统 ----------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# ---------- 运行期 / 临时 ----------
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+*.orig
+*.rej
